@@ -10,8 +10,28 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(
-      color: Colors.blue,
+    return Container(
+      color: Color.fromARGB(255, 255, 255, 255),
+      child:  Column(
+        children: [
+          Row(
+            children: [
+              Column(
+                children: [
+                  Text("Male Icon"), 
+                  Text("Mil")
+                ],
+              ),
+              Column(
+                children: [
+                  Text("FeMale Icon"), 
+                  Text("FeMil")
+                ],
+              )
+            ],
+          )
+        ],
+      )
     );
   }
 }
