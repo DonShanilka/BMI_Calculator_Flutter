@@ -10,28 +10,31 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color.fromARGB(255, 255, 255, 255),
-      child:  Column(
-        children: [
-          Row(
+    return Scaffold(
+        body: SafeArea(
+      child: Container(
+          color: Color.fromARGB(255, 255, 255, 255),
+          child: Column(
             children: [
-              Column(
+              Row(
                 children: [
-                  Text("Male Icon"), 
-                  Text("Mil")
-                ],
-              ),
-              Column(
-                children: [
-                  Text("FeMale Icon"), 
-                  Text("FeMil")
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [Text("Male Icon"), Text("Mil")],
+                    ),
+                  ),
+                  Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [Text("FeMale Icon"), Text("FeMil")],
+                    ),
+                  )
                 ],
               )
             ],
-          )
-        ],
-      )
-    );
+          )),
+    ));
   }
 }
