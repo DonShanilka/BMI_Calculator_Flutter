@@ -13,23 +13,69 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
         body: SafeArea(
       child: Container(
-          color: Color.fromARGB(255, 255, 255, 255),
-          child: Column(
+          color: const Color.fromARGB(255, 229, 242, 255),
+          child: const Column(
             children: [
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0),
                     child: Column(
-                      children: [Icon(Icons.male, size:150,),
-                      const Text("Male")],
+                      children: [
+                        Icon(
+                          Icons.male,
+                          size: 150,
+                        ),
+                        Text("Male")
+                      ],
                     ),
                   ),
                   Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0),
                     child: Column(
-                      children: [Icon(Icons.female, size: 150,), Text("FeMil")],
+                      children: [
+                        Icon(
+                          Icons.female,
+                          size: 150,
+                        ),
+                        Text("FeMil")
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Text("Height"),
+                        Text(
+                          "176",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 0, 0),
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold),
+                        ),
+                         Row(
+                          children: [FloatingActionButton(onPressed: null, child: Icon(Icons.add),)],
+                         )
+                      ],
+                    ),
+                  ),
+                  Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
+                  Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.female,
+                          size: 150,
+                        ),
+                        Text("FeMil")
+                      ],
                     ),
                   )
                 ],
