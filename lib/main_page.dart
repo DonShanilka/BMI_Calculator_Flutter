@@ -68,6 +68,7 @@ class _MainPageState extends State<MainPage> {
                                 size: 40,
                               ),
                             ),
+                            SizedBox(width: 25,),
                             FloatingActionButton(onPressed: null, child: Icon(Icons.remove),)
                           ],
                         )
@@ -79,14 +80,30 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.all(20.0),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.female,
-                          size: 150,
+                        Text("Height"),
+                        Text(
+                          "176",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 25, 0, 255),
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold),
                         ),
-                        Text("FeMil")
+                        Row(
+                          children: [
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(
+                                Icons.add,
+                                size: 40,
+                              ),
+                            ),
+                            SizedBox(width: 25,),
+                            FloatingActionButton(onPressed: null, child: Icon(Icons.remove),)
+                          ],
+                        )
                       ],
                     ),
-                  )
+                  ),
                 ],
               )
             ],
