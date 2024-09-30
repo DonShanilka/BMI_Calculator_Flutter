@@ -59,9 +59,18 @@ class _MainPageState extends State<MainPage> {
                               fontSize: 50,
                               fontWeight: FontWeight.bold),
                         ),
-                         Row(
-                          children: [FloatingActionButton(onPressed: null, child: Icon(Icons.add),)],
-                         )
+                        Row(
+                          children: [
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(
+                                Icons.add,
+                                size: 40,
+                              ),
+                            ),
+                            FloatingActionButton(onPressed: null, child: Icon(Icons.remove),)
+                          ],
+                        )
                       ],
                     ),
                   ),
