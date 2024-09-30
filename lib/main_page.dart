@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first_project/constants.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -54,10 +55,7 @@ class _MainPageState extends State<MainPage> {
                         Text("Height"),
                         Text(
                           "176",
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 0, 0),
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold),
+                          style: kLableStyle,
                         ),
                         Row(
                           children: [
@@ -88,10 +86,7 @@ class _MainPageState extends State<MainPage> {
                         Text("Weight"),
                         Text(
                           "76",
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 0, 0),
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold),
+                          style: kLableStyle,
                         ),
                         Row(
                           children: [
