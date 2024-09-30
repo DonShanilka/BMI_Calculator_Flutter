@@ -21,7 +21,8 @@ class _MainPageState extends State<MainPage> {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
-                      children: [Text("Male Icon"), Text("Mil")],
+                      children: [Icon(Icons.male, size:50,),
+                      Text("Male")],
                     ),
                   ),
                   Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
