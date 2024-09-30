@@ -68,8 +68,13 @@ class _MainPageState extends State<MainPage> {
                                 size: 40,
                               ),
                             ),
-                            SizedBox(width: 25,),
-                            FloatingActionButton(onPressed: null, child: Icon(Icons.remove),)
+                            SizedBox(
+                              width: 25,
+                            ),
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(Icons.remove),
+                            )
                           ],
                         )
                       ],
@@ -80,11 +85,11 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.all(20.0),
                     child: Column(
                       children: [
-                        Text("Height"),
+                        Text("Weight"),
                         Text(
-                          "176",
+                          "76",
                           style: TextStyle(
-                              color: Color.fromARGB(255, 25, 0, 255),
+                              color: Color.fromARGB(255, 255, 0, 0),
                               fontSize: 50,
                               fontWeight: FontWeight.bold),
                         ),
@@ -97,14 +102,22 @@ class _MainPageState extends State<MainPage> {
                                 size: 40,
                               ),
                             ),
-                            SizedBox(width: 25,),
-                            FloatingActionButton(onPressed: null, child: Icon(Icons.remove),)
+                            SizedBox(
+                              width: 25,
+                            ),
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(Icons.remove),
+                            )
                           ],
                         )
                       ],
                     ),
                   ),
                 ],
+              ),
+              Column(
+                children: [Text("BMI"), Text("22.00")],
               )
             ],
           )),
