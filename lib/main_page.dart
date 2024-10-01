@@ -101,14 +101,19 @@ class _MainPageState extends State<MainPage> {
                       child: Column(
                         children: [
                           const Text("Weight"),
-                          const Text(
-                            "76",
+                          Text(
+                            "$weight",
                             style: kLableStyle,
                           ),
                           Row(
                             children: [
                               FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    weight++;
+                                  });
+                                  print(weight);
+                                },
                                 child: const Icon(
                                   Icons.add,
                                   size: 40,
