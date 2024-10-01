@@ -20,9 +20,9 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
         body: SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Container(
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: const Color.fromARGB(255, 255, 255, 255),
             child: Column(
               children: [
                 const Row(
@@ -77,7 +77,6 @@ class _MainPageState extends State<MainPage> {
                                     bmi = calculateBMI(
                                         height: heigt, weight: weight);
                                   });
-                                  print(heigt);
                                 },
                                 child: const Icon(
                                   Icons.add,
@@ -94,18 +93,17 @@ class _MainPageState extends State<MainPage> {
                                     bmi = calculateBMI(
                                         height: heigt, weight: weight);
                                   });
-                                  print(heigt);
                                 },
-                                child: Icon(Icons.remove),
+                                child: const Icon(Icons.remove),
                               )
                             ],
                           )
                         ],
                       ),
                     ),
-                    Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
+                    const Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
                     Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
                           const Text("Weight"),
@@ -122,7 +120,6 @@ class _MainPageState extends State<MainPage> {
                                     bmi = calculateBMI(
                                         height: heigt, weight: weight);
                                   });
-                                  print(weight);
                                 },
                                 child: const Icon(
                                   Icons.add,
@@ -139,9 +136,8 @@ class _MainPageState extends State<MainPage> {
                                     bmi = calculateBMI(
                                         height: heigt, weight: weight);
                                   });
-                                  print(weight);
                                 },
-                                child: Icon(Icons.remove),
+                                child: const Icon(Icons.remove),
                               )
                             ],
                           )
@@ -156,7 +152,7 @@ class _MainPageState extends State<MainPage> {
                 Column(
                   children: [
                     const Text("BMI"),
-                    Text("${bmi.toStringAsFixed(2)}", style: kOutPutColor)
+                    Text(" ${bmi.toStringAsFixed(2)}", style: kOutPutColor)
                   ],
                 )
               ],
@@ -167,5 +163,15 @@ class _MainPageState extends State<MainPage> {
 
   double calculateBMI({required height, required int weight}) {
     return (weight / (height * height)) * 10000;
+  }
+
+  static String getResult(bmi) {
+    if (bmi >= 25) {
+      return 'OverWeight';
+    } else if (bmi > 18.5) {
+      return 'Normal';
+    } else {
+      return 'UnderWeight';
+    }
   }
 }
