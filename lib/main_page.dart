@@ -14,13 +14,13 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
         body: SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: Container(
-            color: const Color.fromARGB(255, 255, 255, 255),
-            child: const Column(
+            color: Color.fromARGB(255, 255, 255, 255),
+            child: Column(
               children: [
-                Row(
-                  children: [
+                const Row(
+                   children: [
                     Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Column(
@@ -48,32 +48,32 @@ class _MainPageState extends State<MainPage> {
                     )
                   ],
                 ),
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
-                          Text("Height"),
-                          Text(
+                          const Text("Height"),
+                          const Text(
                             "176",
                             style: kLableStyle,
                           ),
                           Row(
                             children: [
                               FloatingActionButton(
-                                onPressed: null,
-                                child: Icon(
+                                onPressed: (){},
+                                child: const Icon(
                                   Icons.add,
                                   size: 40,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 25,
                               ),
-                              FloatingActionButton(
-                                onPressed: null,
+                               FloatingActionButton(
+                                onPressed: (){},
                                 child: Icon(Icons.remove),
                               )
                             ],
@@ -82,29 +82,29 @@ class _MainPageState extends State<MainPage> {
                       ),
                     ),
                     Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
-                    Padding(
+                     Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Column(
                         children: [
-                          Text("Weight"),
-                          Text(
+                          const Text("Weight"),
+                          const Text(
                             "76",
                             style: kLableStyle,
                           ),
                           Row(
                             children: [
                               FloatingActionButton(
-                                onPressed: null,
-                                child: Icon(
+                                onPressed: (){},
+                                child: const Icon(
                                   Icons.add,
                                   size: 40,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 25,
                               ),
                               FloatingActionButton(
-                                onPressed: null,
+                                onPressed: (){},
                                 child: Icon(Icons.remove),
                               )
                             ],
@@ -114,13 +114,17 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ],
                 ),
-                 SizedBox(height: 50,),
-                 Column(
+                 const SizedBox(height: 50,),
+                 const Column(
                    children: [Text("BMI"), Text("22.00",style: kOutPutColor)],
                 )
               ],
             )),
       ),
     ));
+  }
+
+  void onHeightMinus(){
+    print("+");
   }
 }
