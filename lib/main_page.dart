@@ -9,7 +9,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int heigt = 10;
+  int heigt = 100;
   int weight = 60;
 
   @override
@@ -126,7 +126,7 @@ class _MainPageState extends State<MainPage> {
                               FloatingActionButton(
                                 onPressed: () {
                                   setState(() {
-                                    if (heigt >= 10) weight--;
+                                    if (weight >= 10) weight--;
                                   });
                                   print(weight);
                                 },
