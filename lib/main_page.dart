@@ -12,6 +12,9 @@ class _MainPageState extends State<MainPage> {
   int heigt = 100;
   int weight = 60;
 
+  // late kiyanne passe welawaka call karanna
+  late double bmi = calculateBMI(height: heigt, weight: weight);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -151,7 +154,7 @@ class _MainPageState extends State<MainPage> {
     ));
   }
 
-  void calculateBMI() {
-    
+  double calculateBMI({required height,required int weight}) {
+    return weight/ (height * height);
   }
 }
