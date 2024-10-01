@@ -123,7 +123,12 @@ class _MainPageState extends State<MainPage> {
                                 width: 25,
                               ),
                               FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    weight--;
+                                  });
+                                  print(weight);
+                                },
                                 child: Icon(Icons.remove),
                               )
                             ],
