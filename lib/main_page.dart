@@ -9,8 +9,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
-  int heigt = 150;
+  int heigt = 10;
   int weight = 60;
 
   @override
@@ -24,7 +23,7 @@ class _MainPageState extends State<MainPage> {
             child: Column(
               children: [
                 const Row(
-                   children: [
+                  children: [
                     Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Column(
@@ -52,7 +51,9 @@ class _MainPageState extends State<MainPage> {
                     )
                   ],
                 ),
-                const SizedBox(height: 50,),
+                const SizedBox(
+                  height: 50,
+                ),
                 Row(
                   children: [
                     Padding(
@@ -60,14 +61,14 @@ class _MainPageState extends State<MainPage> {
                       child: Column(
                         children: [
                           const Text("Height"),
-                           Text(
+                          Text(
                             "$heigt",
                             style: kLableStyle,
                           ),
                           Row(
                             children: [
                               FloatingActionButton(
-                                onPressed: (){
+                                onPressed: () {
                                   setState(() {
                                     heigt++;
                                   });
@@ -81,10 +82,10 @@ class _MainPageState extends State<MainPage> {
                               const SizedBox(
                                 width: 25,
                               ),
-                               FloatingActionButton(
-                                onPressed: (){
+                              FloatingActionButton(
+                                onPressed: () {
                                   setState(() {
-                                    heigt--;
+                                    if (heigt >= 10) heigt--;
                                   });
                                   print(heigt);
                                 },
@@ -96,7 +97,7 @@ class _MainPageState extends State<MainPage> {
                       ),
                     ),
                     Spacer(), // meken wenne me dheka maddata spacer ekak dhanawa
-                     Padding(
+                    Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Column(
                         children: [
@@ -108,7 +109,7 @@ class _MainPageState extends State<MainPage> {
                           Row(
                             children: [
                               FloatingActionButton(
-                                onPressed: (){
+                                onPressed: () {
                                   setState(() {
                                     weight++;
                                   });
@@ -123,9 +124,9 @@ class _MainPageState extends State<MainPage> {
                                 width: 25,
                               ),
                               FloatingActionButton(
-                                onPressed: (){
+                                onPressed: () {
                                   setState(() {
-                                    weight--;
+                                    if (heigt >= 10) weight--;
                                   });
                                   print(weight);
                                 },
@@ -138,9 +139,11 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ],
                 ),
-                 const SizedBox(height: 50,),
-                 const Column(
-                   children: [Text("BMI"), Text("22.00",style: kOutPutColor)],
+                const SizedBox(
+                  height: 50,
+                ),
+                const Column(
+                  children: [Text("BMI"), Text("22.00", style: kOutPutColor)],
                 )
               ],
             )),
@@ -148,7 +151,7 @@ class _MainPageState extends State<MainPage> {
     ));
   }
 
-  void onHeightMinus(){
+  void onHeightMinus() {
     print("+");
   }
 }
