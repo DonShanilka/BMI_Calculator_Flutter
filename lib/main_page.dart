@@ -9,6 +9,10 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+
+  int heigt = 150;
+  int weight = 60;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,14 +60,19 @@ class _MainPageState extends State<MainPage> {
                       child: Column(
                         children: [
                           const Text("Height"),
-                          const Text(
-                            "176",
+                           Text(
+                            "$heigt",
                             style: kLableStyle,
                           ),
                           Row(
                             children: [
                               FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    heigt++;
+                                  });
+                                  print(heigt);
+                                },
                                 child: const Icon(
                                   Icons.add,
                                   size: 40,
@@ -73,7 +82,12 @@ class _MainPageState extends State<MainPage> {
                                 width: 25,
                               ),
                                FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    heigt--;
+                                  });
+                                  print(heigt);
+                                },
                                 child: Icon(Icons.remove),
                               )
                             ],
