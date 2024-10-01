@@ -31,7 +31,9 @@ class _MainPageState extends State<MainPage> {
                       padding: EdgeInsets.all(20.0),
                       child: Column(
                         children: [
+                          
                           Icon(
+                            color: Color.fromARGB(255, 255, 94, 0),
                             Icons.male,
                             size: 150,
                           ),
@@ -45,6 +47,7 @@ class _MainPageState extends State<MainPage> {
                       child: Column(
                         children: [
                           Icon(
+                            color: Color.fromARGB(255, 0, 140, 255),
                             Icons.female,
                             size: 150,
                           ),
@@ -152,7 +155,8 @@ class _MainPageState extends State<MainPage> {
                 Column(
                   children: [
                     const Text("BMI"),
-                    Text(" ${bmi.toStringAsFixed(2)}", style: kOutPutColor)
+                    Text(" ${bmi.toStringAsFixed(2)}", style: kOutPutColor),
+                    Text(getResult(bmi))
                   ],
                 )
               ],
