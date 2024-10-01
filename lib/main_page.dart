@@ -166,6 +166,6 @@ class _MainPageState extends State<MainPage> {
   }
 
   double calculateBMI({required height, required int weight}) {
-    return weight / (height * height);
+    return (weight / (height * height)) * 10000;
   }
 }
