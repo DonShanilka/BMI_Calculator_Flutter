@@ -12,7 +12,7 @@ class _MainPageState extends State<MainPage> {
   int heigt = 100;
   int weight = 60;
 
-  // late kiyanne passe welawaka call karanna
+  // late kiyanne passe welawaka call karanna // value eka passe dhenne
   late double bmi = calculateBMI(height: heigt, weight: weight);
 
   @override
@@ -74,6 +74,8 @@ class _MainPageState extends State<MainPage> {
                                 onPressed: () {
                                   setState(() {
                                     heigt++;
+                                    bmi = calculateBMI(
+                                        height: heigt, weight: weight);
                                   });
                                   print(heigt);
                                 },
@@ -89,6 +91,8 @@ class _MainPageState extends State<MainPage> {
                                 onPressed: () {
                                   setState(() {
                                     if (heigt >= 10) heigt--;
+                                    bmi = calculateBMI(
+                                        height: heigt, weight: weight);
                                   });
                                   print(heigt);
                                 },
@@ -115,6 +119,8 @@ class _MainPageState extends State<MainPage> {
                                 onPressed: () {
                                   setState(() {
                                     weight++;
+                                    bmi = calculateBMI(
+                                        height: heigt, weight: weight);
                                   });
                                   print(weight);
                                 },
@@ -130,6 +136,8 @@ class _MainPageState extends State<MainPage> {
                                 onPressed: () {
                                   setState(() {
                                     if (weight >= 10) weight--;
+                                    bmi = calculateBMI(
+                                        height: heigt, weight: weight);
                                   });
                                   print(weight);
                                 },
@@ -145,8 +153,11 @@ class _MainPageState extends State<MainPage> {
                 const SizedBox(
                   height: 50,
                 ),
-                const Column(
-                  children: [Text("BMI"), Text("22.00", style: kOutPutColor)],
+                Column(
+                  children: [
+                    const Text("BMI"),
+                    Text("$bmi", style: kOutPutColor)
+                  ],
                 )
               ],
             )),
@@ -154,7 +165,7 @@ class _MainPageState extends State<MainPage> {
     ));
   }
 
-  double calculateBMI({required height,required int weight}) {
-    return weight/ (height * height);
+  double calculateBMI({required height, required int weight}) {
+    return weight / (height * height);
   }
 }
