@@ -151,7 +151,7 @@ class _MainPageState extends State<MainPage> {
     ));
   }
 
-  void onHeightMinus() {
-    print("+");
+  void calculateBMI() {
+    
   }
 }
