@@ -156,7 +156,7 @@ class _MainPageState extends State<MainPage> {
                 Column(
                   children: [
                     const Text("BMI"),
-                    Text("$bmi", style: kOutPutColor)
+                    Text("${bmi.toStringAsFixed(2)}", style: kOutPutColor)
                   ],
                 )
               ],
